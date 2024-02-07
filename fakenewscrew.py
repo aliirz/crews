@@ -47,22 +47,22 @@ public_sentiment_analyst_agent = Agent(
 def analyze_news_article(content):
 
     fact_checking_task = Task(
-        description=f'Analyze the news article: {gpt4_analysis} for factual accuracy. Final answer must be a detailed report on factual findings.',
+        description=f'Analyze the news article: {content} for factual accuracy. Final answer must be a detailed report on factual findings.',
         agent=fact_checking_agent
     )
 
     political_analysis_task = Task(
-        description=f'Analyze the political context of the news article: {gpt4_analysis}. Final answer must include an assessment of the current political situation and its credibility.',
+        description=f'Analyze the political context of the news article: {content}. Final answer must include an assessment of the current political situation and its credibility.',
         agent=political_analyst_agent
     )
 
     media_bias_analysis_task = Task(
-        description=f'Evaluate the news source: {gpt4_analysis} for biases and report on potential influences on the article\'s narrative. Final answer must include an analysis of media bias.',
+        description=f'Evaluate the news source: {content} for biases and report on potential influences on the article\'s narrative. Final answer must include an analysis of media bias.',
         agent=media_bias_analyst_agent
     )
 
     public_sentiment_analysis_task = Task(
-        description=f'Analyze public reaction to the news: {gpt4_analysis} on social media and forums. Final answer must summarize public sentiment.',
+        description=f'Analyze public reaction to the news: {content} on social media and forums. Final answer must summarize public sentiment.',
         agent=public_sentiment_analyst_agent
     )
 
