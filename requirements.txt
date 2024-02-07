@@ -1,0 +1,3 @@
+langchain==0.0.354
+crewai==0.1.24
+duckduckgo_search==4.4
